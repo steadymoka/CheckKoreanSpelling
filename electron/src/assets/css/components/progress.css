@@ -1,0 +1,30 @@
+
+.progress-bar {
+  @apply w-full bg-gray-100 overflow-hidden;
+  height: 12px;
+  border-radius: 6px;
+}
+
+.bar {
+  height: 100%;
+  border-radius: 6px;
+}
+
+.progress-circle {
+  position: relative;
+  .svg {
+    .path {
+      transform-origin: center;
+      transform: rotate(270deg);
+      stroke: theme('colors.purple.500');
+    }
+  }
+  .text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.25rem;
+    color: theme('colors.indigo.900');
+  }
+}

@@ -1,0 +1,21 @@
+
+.badge-md {
+  @apply block text-sm;
+  padding: .1875rem .625rem .25rem;
+  border-radius: .875rem;
+}
+
+.badge-sm {
+  @apply block text-xs;
+  padding: .125rem .5rem .25rem;
+  border-radius: .75rem;
+}
+
+.badge-group {
+  @apply flex flex-wrap;
+  margin: -.25rem;
+  .badge-sm,
+  .badge-md {
+    margin: .25rem;
+  }
+}

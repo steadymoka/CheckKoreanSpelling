@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "lib": [
+      "DOM",
+      "es2017",
+      "esnext.asynciterable"
+    ],
+    "emitDeclarationOnly": true,
+    "declaration": true,
+    "pretty": true,
+    "sourceMap": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "noImplicitReturns": true,
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./src/*"]
+    }
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.vue"
+  ],
+  "files": [
+    "src/types/container.d.ts",
+    "src/types/vue.d.ts",
+    "src/types/vue-apollo.d.ts",
+    "src/types/vue-router.d.ts"
+  ]
+}

@@ -1,0 +1,6 @@
+mutation CheckSpelling($contents: String) {
+  checkSpelling(contents: $contents) {
+    textToCopy
+    textToDisplay
+  }
+}

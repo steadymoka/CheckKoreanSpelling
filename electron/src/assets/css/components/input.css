@@ -1,0 +1,21 @@
+
+.input-lg {
+  @apply rounded-lg;
+  height: 2.5rem;
+  padding: .375rem .5rem;
+  border-width: .125rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.input-md {
+  flex: 1 1 100px;
+  border-radius: 0.25rem;
+  height: 1.9rem;
+  padding: 0.2rem .3rem;
+  border-width: .125rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 1px 3px;
+}
+

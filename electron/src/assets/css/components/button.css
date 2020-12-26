@@ -1,0 +1,23 @@
+
+.button-lg {
+  @apply rounded-lg;
+  height: 2.5rem;
+  padding: .375rem .5rem;
+  border-width: .125rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.btn-rounded-lg {
+  height: 2.5rem;
+  border-radius: 1.25rem;
+  padding-left: .75rem;
+  padding-right: .75rem;
+}
+
+.btn-rounded-md {
+  height: 2.25rem;
+  border-radius: 1.125rem;
+  padding-left: .625rem;
+  padding-right: .625rem;
+}

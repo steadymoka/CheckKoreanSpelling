@@ -1,0 +1,22 @@
+
+@import 'typeface-notosans-kor';
+
+@import './theme/variables.css';
+@import './theme/tailwind.css';
+@import './theme/reset.css';
+
+@import './components/input.css';
+@import './components/badge.css';
+@import './components/button.css';
+@import './components/card.css';
+@import './components/electron.css';
+@import './components/layout.css';
+@import './components/transition.css';
+@import './components/view.css';
+@import './components/sidebar.css';
+@import './components/progress.css';
+
+#app {
+  width: 100%;
+  height: 100%;
+}

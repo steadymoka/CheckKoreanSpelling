@@ -1,0 +1,10 @@
+*.iml
+.gradle/
+build/
+.idea/
+.DS_STORE
+local.properties
+*.hprof
+
+/shared/build
+/shared/apikey.properties

@@ -1,0 +1,10 @@
+
+.view-h1 {
+  @apply text-xl text-purple-500 font-medium;
+}
+.view-h2 {
+  @apply text-lg text-gray-800 font-medium;
+}
+.view-card {
+  box-shadow: 0 8px 16px rgba(theme('colors.gray.200'), .25);
+}

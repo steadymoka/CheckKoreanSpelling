@@ -1,0 +1,39 @@
+# package directories
+node_modules
+jspm_packages
+
+# Serverless directories
+.serverless
+
+# typescript .build /dist
+.build
+/dist-server
+/dist-infra
+/dist
+
+# direnv
+.envrc
+
+# environment
+.env.prod.yml
+.env.dev.yml
+.env-cmdrc.js
+
+# jwt.key
+jwt.key
+jwt.config.ts
+jwt.key.pem
+jwt.key.pub
+
+# webpack
+.webpack
+
+.DS_Store
+src/.DS_Store
+
+# VSCode
+.vscode
+
+# CDK asset staging directory
+.cdk.staging
+cdk.out

@@ -1,0 +1,14 @@
+
+.vscode
+
+.envrc
+.env-cmdrc.js
+
+.DS_Store
+/node_modules
+/src/stubs
+
+/dist
+/release
+
+*.ignore.*

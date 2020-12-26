@@ -1,0 +1,16 @@
+{
+  "presets": [
+    ["@babel/preset-env", {
+      "targets": "maintained node versions",
+      "useBuiltIns": "usage",
+      "corejs": 3
+    }],
+    "@babel/preset-typescript",
+    "babel-preset-typescript-vue"
+  ],
+  "plugins": [
+    [ "@babel/plugin-proposal-decorators", { "legacy": true }],
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-transform-runtime"
+  ]
+}

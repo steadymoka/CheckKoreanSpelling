@@ -1,0 +1,29 @@
+
+.card {
+  @apply bg-white p-4;
+  border-radius: 12px;
+}
+
+.card-icon {
+  @apply bg-purple-100 flex items-center justify-center;
+  width: 56px;
+  height: 56px;
+  border-radius: 28px;
+  svg {
+    fill: theme('colors.purple.500');
+  }
+}
+
+.card-close {
+  display: block;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  right: 0;
+  padding: 16px;
+  z-index: 1;
+  svg {
+    display: block;
+    fill: theme('colors.gray.300');
+  }
+}

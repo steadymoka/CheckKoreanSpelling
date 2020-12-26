@@ -1,0 +1,35 @@
+* {
+  margin: 0px;
+}
+
+#webview {
+  width: 100vw;
+  height: 100vh;
+}
+
+.filter {
+  width: 100vw;
+  height: 100vh;
+  z-index: 99999;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.filter:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+}
+
+.filter span {
+  top: calc(50vh - 50px);
+  position: absolute;
+  text-align: center;
+  display: block;
+}
+
+.filter:hover span::after {
+  color: #fff;
+  content: '다른 창에 의해 제어되고 있습니다.';
+  text-align: center;
+}
