@@ -1,5 +1,6 @@
 
 module.exports = {
+  productName: "맞춤법 검사기",
   appId: 'land.moka.spellcheck',
   directories: {
     output: 'release',
@@ -12,6 +13,7 @@ module.exports = {
     bucket: `${process.env.PUBLISH_S3_BUCKET}`,
   },
   mac: {
+    target: "dmg",
     type: 'distribution',
     icon: 'build/icons/icon.icns',
     category: 'public.app-category.productivity',
