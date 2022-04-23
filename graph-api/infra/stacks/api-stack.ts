@@ -65,7 +65,7 @@ export class ApiStack extends Stack {
 
     const fnHome = new LFunction(this, 'HomeHandler', {
       functionName: `${STAGE}-sc-api-home`,
-      runtime: Runtime.NODEJS_12_X,
+      runtime: Runtime.NODEJS_14_X,
       code,
       handler: 'entries/http.home',
       environment,
@@ -73,7 +73,7 @@ export class ApiStack extends Stack {
 
     const fnGraphQL = new LFunction(this, 'GraphqlHandler', {
       functionName: `${STAGE}-sc-api-graphql`,
-      runtime: Runtime.NODEJS_12_X,
+      runtime: Runtime.NODEJS_14_X,
       code,
       handler: 'entries/http.graphql',
       environment,

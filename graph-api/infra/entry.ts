@@ -1,9 +1,6 @@
-#!/usr/bin/env node
-
-import 'source-map-support/register'
+import { App } from '@aws-cdk/core'
 
 import { ApiStack } from './stacks/api-stack'
-import { App } from '@aws-cdk/core'
 
 const app = new App()
 

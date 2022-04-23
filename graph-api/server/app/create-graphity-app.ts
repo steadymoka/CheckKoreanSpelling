@@ -1,6 +1,5 @@
 import { Graphity } from 'graphity'
 
-import { AuthProvider } from '../providers/auth-provider'
 import { HomeResolver } from '../resolvers/home-resolver'
 
 export function createGraphityApp(): Graphity {
@@ -10,6 +9,5 @@ export function createGraphityApp(): Graphity {
     ],
   })
 
-  graphity.register(new AuthProvider())
   return graphity
 }

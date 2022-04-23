@@ -3,28 +3,35 @@ import { APIGatewayProxyHandler } from 'aws-lambda'
 
 import { createGraphityApp } from '../app/create-graphity-app'
 
-const server = new ServerLambda(createGraphityApp(), {
-  callbackWaitsForEmptyEventLoop: false,
-  cors: {
-    credentials: true,
-    origin: [
-      'https://moka.land',
-      'https://moka.land',
-    ],
-    methods: [
-      'OPTIONS',
-      'HEAD',
-      'GET',
-      'POST',
-    ],
-    allowedHeaders: [
-      'Authorization',
-      'Content-Type',
-    ],
-  },
-})
+let serverPromise = null as Promise<ServerLambda> | null
+function getServer(): Promise<ServerLambda> {
+  if (!serverPromise) {
+    serverPromise = (async () => {
+      return new ServerLambda(createGraphityApp(), {
+        callbackWaitsForEmptyEventLoop: false,
+        cors: {
+          origin: [
+            'https://moka.land',
+            'https://moka.land',
+          ],
+          methods: [
+            'OPTIONS',
+            'HEAD',
+            'GET',
+            'POST',
+          ],
+          allowedHeaders: [
+            'Authorization',
+            'Content-Type',
+          ],
+        },
+      })
+    })()
+  }
+  return serverPromise
+}
 
-export const home: APIGatewayProxyHandler = () => {
+export const home: APIGatewayProxyHandler = async () => {
   return Promise.resolve({
     statusCode: 200,
     headers: {
@@ -38,5 +45,5 @@ export const home: APIGatewayProxyHandler = () => {
 }
 
 export const graphql: APIGatewayProxyHandler = (event, context, callback) => {
-  server.execute(event, context, callback)
+  getServer().then(server => server.execute(event, context, callback))
 }
